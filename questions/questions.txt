@@ -1,0 +1,17 @@
+Questions
+
+Which type of order, CNC or Laser, generated a larger revenue stream?
+
+Based on the dataset with no filters applied, it’s Laser. (12.5M vs 8.7M)
+
+What are the trends in total order counts and median customer prices for CNC and Laser orders?
+
+CNC order count is pretty stagnant with no trend in either direction. CNC media customer price trend in trending downward. Laser total count and median customer price is basically stable (no growth or decline). Trends are calculated over this years dataset starting beginning  of January. 
+
+Are there any differences in the revenue performances of CNC and Laser orders in different countries (account_manager_country  GB or EE?
+
+CNC and Laser revenues are pretty equal in GB  (6.59M vs 6.55M respectively). In FI Laser is about 5 times as big as CNC (3,2M vs 650k). In EE Laser is roughly twice as big in revenue (2.8M vs 1.5M). 
+
+Are orders with secondary surface finishes becoming more popular? Is their number increasing?
+
+It does not look like secondary surface finished are becoming more popular.  They fluctuate between 90-130 weekly. 
