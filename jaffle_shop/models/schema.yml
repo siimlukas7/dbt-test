@@ -1,0 +1,77 @@
+models:
+  - name: siim_parts_ext
+    description: "This table includes additional data about part configurations"
+    columns:
+      - name: dwh_id
+        description: "Surrogate internal dwh key"
+        tests:
+          - unique
+          - not_null
+      - name: order_part_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: part_surface_primary_finish
+        description: "This primary finish of the part"
+      - name: part_surface_secondary_finish
+        description: "This secondary finish of the part"
+      - name: part_ral_code
+        description: "The RAL code of the part"
+      - name: part_ral_finish
+        description: "The RAL finishd of the part"
+      - name: dwh_inserted_ts_utc
+        description: "UTC timestamp of when the data was inserted to the table"
+        tests:
+          - not_null
+      - name: dwh_updated_ts_utc
+        description: "UTC timestamp of when the data was updated to the table"
+        tests:
+          - not_null
+  - name: siim_orders_ext
+    description: "This table includes calculated metrics for an order"
+    columns:
+    - name: dwh_id
+      description: "Surrogate internal dwh key"
+      tests:
+        - unique
+        - not_null
+    - name: order_id
+      description: "Order ID number"
+      tests:
+        - unique
+        - not_null
+    - name: distinct_part_id_cnt
+      description: "What does different parts mean here? - Parts count (different parts, not total quantity of parts)"
+    - name: distinct_material_cnt
+      description: "What does different parts mean here? - Parts count (different parts, not total quantity of parts)"
+    - name: cnc_part_cnt
+      description: "CNC parts count"
+    - name: laser_part_cnt
+      description: "Laser parts count"
+    - name: bending_part_cnt
+      description: "Bending parts count"
+    - name: total_bends_cnt
+      description: "Total bends count"
+    - name: surface_coaring_part_cnt
+      description: "Surface coating parts count"
+    - name: insert_operations_part_cnt
+      description: "Insert operations parts count"
+    - name: list_part_ral_code
+      description: "All unique RAL codes of an order, joined in a single string (like 2004,1006,1551)"
+    - name: list_part_ral_finish
+      description: "All unique RAL finishes of an order, joined in a single string"
+    - name: list_part_primary_finish
+      description: "All unique surface finishes of an order, joined in a single string"
+    - name: list_part_secondary_finish
+      description: "All unique secondary surface finishes of an order, joined in a single string"
+    - name: dwh_inserted_ts_utc
+      description: "UTC timestamp of when the data was inserted to the table"
+      tests:
+        - not_null
+    - name: dwh_updated_ts_utc
+      description: "UTC timestamp of when the data was updated to the table"
+      tests:
+        - not_null
+    
+

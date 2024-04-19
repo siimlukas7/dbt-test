@@ -1,0 +1,10 @@
+siim_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: aws-rds-111
+      dataset: analytics_engineer_test_task
+      threads: 1
+      keyfile: "service_account_test_task.json"

@@ -1,0 +1,14 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "name": "BigQuery",
+            "authenticator": "SERVICE_ACCOUNT",
+            "location": "europe",
+            "previewLimit": 50,
+            "driver": "BigQuery",
+            "keyfile": "/Users/siimlukas/Documents/GitHub/dbt-test/jaffle_shop/service_account_test_task.json"
+        }
+    ],
+    "dbt.queryLimit": 500
+}
